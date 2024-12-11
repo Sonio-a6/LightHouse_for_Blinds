@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting to Text and Voice</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Handwriting Recognition</h1>
+        <canvas id="whiteboard"></canvas>
+        <div class="controls">
+            <button id="toggleEraser">Toggle Eraser</button>
+            <button id="clearCanvas">Clear Canvas</button>
+            <button id="recognizeText">Recognize and Speak</button>
+            <button id="clearText">Clear Text</button>
+        </div>
+        
+        <p id="output">Draw on the canvas and click "Recognize and Speak"!</p>
+    </div>
+    <div class="typed-text-section">
+        <textarea id="typedText" rows="3" placeholder="Type your text here..."></textarea>
+        <button id="speakText">Speak Typed Text</button>
+    </div>
+    
+    <label for="thickness">Brush Size:</label>
+<input type="range" id="thickness" min="1" max="10" value="4">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+
+    <script src="./project.js"></script>
+</body>
+</html>
